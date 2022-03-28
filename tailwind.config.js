@@ -3,8 +3,13 @@ module.exports = {
         './pages/**/*.{js,jsx,ts,tsx}',
         './components/**/*.{js,jsx,ts,tsx}',
     ],
+    darkMode: false,
     theme: {
         extend: {
+            transitionProperty: {
+                right: 'right',
+                left: 'left',
+            },
             fontFamily: {
                 poppins: ['Poppins', 'sans-serif'],
             },
