@@ -16,6 +16,7 @@ module.exports = {
             colors: {
                 'maha-purple': '#93268F',
                 'maha-green': '#8CC73F',
+                'main-background': '#FBF9FA',
             },
         },
     },
