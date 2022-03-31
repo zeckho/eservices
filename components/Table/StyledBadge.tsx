@@ -1,0 +1,38 @@
+/* eslint-disable import/prefer-default-export */
+import { styled } from '@nextui-org/react';
+
+// Badge component will be available as part of the core library soon
+export const StyledBadge = styled('span', {
+    display: 'inline-block',
+    textTransform: 'uppercase',
+    padding: '$2 $3',
+    margin: '0 2px',
+    fontSize: '10px',
+    fontWeight: '$bold',
+    borderRadius: '5px',
+    letterSpacing: '0.6px',
+    lineHeight: 1,
+    boxShadow: '1px 2px 5px 0px rgb(0 0 0 / 5%)',
+    alignItems: 'right',
+    alignSelf: 'center',
+    color: '$white',
+    variants: {
+        type: {
+            active: {
+                bg: '$successLight',
+                color: '$primary',
+            },
+            paused: {
+                bg: '$errorLight',
+                color: '$error',
+            },
+            vacation: {
+                bg: '$warningLight',
+                color: '$warning',
+            },
+        },
+    },
+    defaultVariants: {
+        type: 'active',
+    },
+});

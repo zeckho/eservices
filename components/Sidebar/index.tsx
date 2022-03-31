@@ -33,7 +33,7 @@ export default function Sidebar() {
             {/* sidebar overlay */}
             <div className={sidebar ? 'bg-black cursor-pointer fixed inset-0 opacity-5 visible' : 'hidden opacity-0'} onClick={handleSidebar} />
             {/* sidebar */}
-            <div className={`bg-white fixed inset-y-0 pb-4 shadow-lg ease-in-out left-0 translate-x-0 ${sidebar ? 'w-64' : 'duration-500 w-20'}`}>
+            <aside className={`bg-white z-[999] fixed sm:block hidden inset-y-0 pb-4 shadow-lg ease-in-out left-0 translate-x-0 ${sidebar ? 'w-64' : 'duration-500 w-20'}`}>
                 {/* sidebar close button */}
                 <button className="absolute -right-14 p-4 text-gray-500 transition hover:text-maha-purple" onClick={handleSidebar}>
                     <FontAwesomeIcon
@@ -48,15 +48,15 @@ export default function Sidebar() {
                 </div>
 
                 {/* sidebar menu */}
-                <ul className="mt-4 text-gray-600">
+                <ul className="mt-4 text-gray-500">
                     <li>
                         <Link href="/">
-                            <a className={`font-medium space-x-2 inline-flex px-4 py-4 transition w-full text-gray-700 hover:text-maha-purple hover:border-r-4 hover:border-maha-purple ${router ? 'text-maha-purple border-maha-purple border-r-4' : ''} ${sidebar ? 'items-center' : 'mb-4 justify-center'}`}>
+                            <a className={`font-medium space-x-2 inline-flex px-4 transition w-full hover:text-maha-purple hover:bg-gray-100 hover:border-r-2 hover:border-maha-purple ${router ? 'text-maha-purple border-maha-purple border-r-4' : ''} ${sidebar ? 'items-center py-2' : 'py-4 mb-4 justify-center'}`}>
                                 <Tooltip content={sidebar ? '' : 'Dashboard'} rounded contentColor="secondary" placement="right" hideArrow offset={40}>
                                     <FontAwesomeIcon icon={faChartBar} fixedWidth size="sm" />
                                 </Tooltip>
                                 {' '}
-                                <span className={sidebar ? '' : 'hidden'}>
+                                <span className={`${sidebar ? '' : 'hidden'} py-1.5`}>
                                     Dashboard
                                 </span>
                             </a>
@@ -64,61 +64,61 @@ export default function Sidebar() {
                     </li>
                     <li>
                         <Link href="/">
-                            <a className={`font-medium space-x-2 inline-flex px-4 py-4 transition w-full text-gray-700 hover:text-maha-purple hover:border-r-4 hover:border-maha-purple ${sidebar ? 'items-center' : 'mb-4 justify-center'}`}>
+                            <a className={`font-medium space-x-2 inline-flex px-4 transition w-full hover:text-maha-purple hover:bg-gray-100 hover:border-r-2 hover:border-maha-purple ${sidebar ? 'items-center py-2' : 'py-4 mb-4 justify-center'}`}>
                                 <Tooltip content={sidebar ? '' : 'Order Management'} rounded contentColor="secondary" placement="right" hideArrow offset={40}>
                                     <FontAwesomeIcon icon={faShoppingCart} fixedWidth size="sm" />
                                 </Tooltip>
                                 {' '}
-                                <span className={sidebar ? '' : 'hidden'}>Order Management</span>
+                                <span className={`${sidebar ? '' : 'hidden'} py-1.5`}>Order Management</span>
                             </a>
                         </Link>
                     </li>
                     <li>
                         <Link href="/">
-                            <a className={`font-medium space-x-2 inline-flex px-4 py-4 transition w-full text-gray-700 hover:text-maha-purple hover:border-r-4 hover:border-maha-purple ${sidebar ? 'items-center' : 'mb-4 justify-center'}`}>
+                            <a className={`font-medium space-x-2 inline-flex px-4 transition w-full hover:text-maha-purple hover:bg-gray-100 hover:border-r-2 hover:border-maha-purple ${sidebar ? 'items-center py-2' : 'py-4 mb-4 justify-center'}`}>
                                 <Tooltip content={sidebar ? '' : 'Invoices'} rounded contentColor="secondary" placement="right" hideArrow offset={40}>
                                     <FontAwesomeIcon icon={faDollarSign} fixedWidth size="sm" />
                                 </Tooltip>
                                 {' '}
-                                <span className={sidebar ? '' : 'hidden'}>Invoices</span>
+                                <span className={`${sidebar ? '' : 'hidden'} py-1.5`}>Invoices</span>
                             </a>
                         </Link>
                     </li>
                     <li>
                         <Link href="/">
-                            <a className={`font-medium space-x-2 inline-flex px-4 py-4 transition w-full text-gray-700 hover:text-maha-purple hover:border-r-4 hover:border-maha-purple ${sidebar ? 'items-center' : 'mb-4 justify-center'}`}>
+                            <a className={`font-medium space-x-2 inline-flex px-4 transition w-full hover:text-maha-purple hover:bg-gray-100 hover:border-r-2 hover:border-maha-purple ${sidebar ? 'items-center py-2' : 'py-4 mb-4 justify-center'}`}>
                                 <Tooltip content={sidebar ? '' : 'Product Information'} rounded contentColor="secondary" placement="right" hideArrow offset={40}>
                                     <FontAwesomeIcon icon={faInfoCircle} fixedWidth size="sm" />
                                 </Tooltip>
                                 {' '}
-                                <span className={sidebar ? '' : 'hidden'}>Product Information</span>
+                                <span className={`${sidebar ? '' : 'hidden'} py-1.5`}>Product Information</span>
                             </a>
                         </Link>
                     </li>
                     <li>
                         <Link href="/">
-                            <a className={`font-medium space-x-2 inline-flex px-4 py-4 transition w-full text-gray-700 hover:text-maha-purple hover:border-r-4 hover:border-maha-purple ${sidebar ? 'items-center' : 'mb-4 justify-center'}`}>
+                            <a className={`font-medium space-x-2 inline-flex px-4 transition w-full hover:text-maha-purple hover:bg-gray-100 hover:border-r-2 hover:border-maha-purple ${sidebar ? 'items-center py-2' : 'py-4 mb-4 justify-center'}`}>
                                 <Tooltip content={sidebar ? '' : 'Recommendations'} rounded contentColor="secondary" placement="right" hideArrow offset={40}>
                                     <FontAwesomeIcon icon={faThumbsUp} fixedWidth size="sm" />
                                 </Tooltip>
                                 {' '}
-                                <span className={sidebar ? '' : 'hidden'}>Recommendations</span>
+                                <span className={`${sidebar ? '' : 'hidden'} py-1.5`}>Recommendations</span>
                             </a>
                         </Link>
                     </li>
                     <li>
                         <Link href="/">
-                            <a className={`font-medium space-x-2 inline-flex px-4 py-4 transition w-full text-gray-700 hover:text-maha-purple hover:border-r-4 hover:border-maha-purple ${sidebar ? 'items-center' : 'mb-4 justify-center'}`}>
+                            <a className={`font-medium space-x-2 inline-flex px-4 transition w-full hover:text-maha-purple hover:bg-gray-100 hover:border-r-2 hover:border-maha-purple ${sidebar ? 'items-center py-2' : 'py-4 mb-4 justify-center'}`}>
                                 <Tooltip content={sidebar ? '' : 'Quotations'} rounded contentColor="secondary" placement="right" hideArrow offset={40}>
                                     <FontAwesomeIcon icon={faFileInvoiceDollar} fixedWidth size="sm" />
                                 </Tooltip>
                                 {' '}
-                                <span className={sidebar ? '' : 'hidden'}>Quotations</span>
+                                <span className={`${sidebar ? '' : 'hidden'} py-1.5`}>Quotations</span>
                             </a>
                         </Link>
                     </li>
                 </ul>
-            </div>
+            </aside>
         </>
     );
 }
